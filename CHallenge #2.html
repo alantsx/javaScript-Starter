@@ -1,0 +1,22 @@
+<!-- Crie uma função que dado um intervalo (entre x e y) exiba todos número pares: -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <script>
+            var npar = 0;
+            function pares(x, y) {
+                for (var i = x; i <= y; i++) {
+                    if (i % 2 == 0) {
+                        npar++;
+                    }
+                }
+                return npar;
+            }
+      var resultado = pares(32, 321);
+      console.log(resultado);
+    </script>
+    </body>
+</html>
