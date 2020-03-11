@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <button class="botao">Clique aqui</button>
+        </div>
+        <script>
+            var btnElement = document.querySelector('button.botao');
+
+            btnElement.onclick = function () {
+            var quadradoElement = document.createElement('div');
+
+            quadradoElement.style.backgroundColor = "red";
+            quadradoElement.style.width = "100px";
+            quadradoElement.style.height = "100px";
+            
+            document.querySelector('#app').appendChild(quadradoElement);
+            }
+
+        </script>
+    </body>
+</html>
