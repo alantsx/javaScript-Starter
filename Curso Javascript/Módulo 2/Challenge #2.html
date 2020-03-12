@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <button class="botao">Clique aqui</button>
+        </div>
+        <script>
+            var btnElement = document.querySelector('button.botao');
+
+            btnElement.onclick = function () {
+            var quadradoElement = document.createElement('div');
+            
+            quadradoElement.style.backgroundColor = 'red';
+            quadradoElement.style.width = 100;
+            quadradoElement.style.height = 100;
+            quadradoElement.onmouseover = function () {
+                function getRandomColor() {
+                    var letters = "0123456789ABCDEF";
+                    var color = "#";
+                    for (var i = 0; i < 6; i++) {
+                        color += letters[Math.floor(Math.random() * 16)];
+                        }
+                    return color;
+                    }
+                var newColor = getRandomColor(); // #E943F0
+                quadradoElement.style.backgroundColor = newColor;
+            };
+            
+            document.querySelector('#app').appendChild(quadradoElement);
+            }
+        </script>
+    </body>
+</html>
