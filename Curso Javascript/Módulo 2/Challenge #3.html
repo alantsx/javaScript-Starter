@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <button class="botao">Clique aqui</button>
+            <ul>
+
+            </ul>
+        </div>
+        <script>
+            var btnElement = document.querySelector('button.botao');
+            var nomes = ['Diego', 'Gabriel', 'Lucas', 'Alan'];
+
+            btnElement.onclick = function () {
+                for (var i = 0; i < nomes.length; i++) {
+                    var lista = document.createElement('li');
+                    var n = document.createTextNode (nomes[i]);
+                    lista.appendChild(n);
+                    document.querySelector('ul').appendChild(lista);
+                }
+            }
+        </script>
+    </body>
+</html>
