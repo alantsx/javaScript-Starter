@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome">
+            <button class="adicionar">Adicionar</button>
+            <button class="botao">Clique aqui</button>
+            <ul>
+
+            </ul>
+        </div>
+        <script>
+            var btnElement = document.querySelector('button.botao');
+            var btnAdicionar = document.querySelector('button.adicionar');
+            var nomes = ['Diego', 'Gabriel', 'Lucas', 'Alan'];
+
+            btnAdicionar.onclick = function () {
+                var inputValue = document.querySelector('input').value;
+                nomes.push(inputValue);
+            }
+
+            btnElement.onclick = function () {
+                for (var i = 0; i < nomes.length; i++) {
+                    var lista = document.createElement('li');
+                    var n = document.createTextNode (nomes[i]);
+                    lista.appendChild(n);
+                    document.querySelector('ul').appendChild(lista);
+                }
+            }
+        </script>
+    </body>
+</html>
